@@ -1,11 +1,12 @@
 # Sales Data Visualizer
 
-This Streamlit app allows users to upload CSV or Excel files containing sales data and generates various visualizations to provide insights into the data.
+This Streamlit app allows users to upload CSV or Excel files containing sales data and generates various visualizations to provide insights into the data. The app is flexible and can handle different column names in the uploaded files.
 
 ## Features
 
 - File upload for CSV and Excel files
 - Display of raw data
+- Flexible column mapping for different file structures
 - Interactive visualizations:
   1. Total Revenue by Product Category
   2. Customer Age Distribution
@@ -48,15 +49,29 @@ This Streamlit app allows users to upload CSV or Excel files containing sales da
 
 3. Use the file uploader to select your CSV or Excel file.
 
-4. The app will display the raw data and generate interactive visualizations based on the uploaded file.
+4. The app will display the raw data from your file.
 
-## Data Format
+5. If your file has different column names than expected, use the dropdown menus to map the correct columns.
 
-The app expects the following columns in your CSV or Excel file:
+6. Click the "Create Visualizations" button to generate the interactive charts based on your data and column mapping.
+
+## Expected Data Fields
+
+The app looks for the following fields in your data:
+
+- Date
+- Customer Age
+- Country
+- Product Category
+- Product
+- Revenue
+- Profit
+
+If your file uses different column names, you can map them using the provided interface.
 
 ## Customization
 
-You can customize the visualizations or add new ones by modifying the `app.py` file. The app uses Plotly for creating interactive charts, so refer to the [Plotly Python documentation](https://plotly.com/python/) for more chart types and options.
+You can customize the visualizations or add new ones by modifying the `create_visualizations` function in the `app.py` file. The app uses Plotly for creating interactive charts, so refer to the [Plotly Python documentation](https://plotly.com/python/) for more chart types and options.
 
 ## Contributing
 
